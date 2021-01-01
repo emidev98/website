@@ -35,10 +35,10 @@ module.exports = {
                 'sass-loader'
             ]
         }, {
-            test: /\.(png|jpg)$/,
+            test: /\.(png|jpg|woff2)$/,
             exclude: /(node_modules)/,
             use: [
-                'url-loader'
+                'url-loader?limit=30000&name=[name]-[hash].[ext]'
             ]
         }]
     },
